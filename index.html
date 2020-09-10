@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lazy Drop</title>
+    <link href="./style.css" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Lazy Drop</h1>
+
+    <p>
+        Welcome to Lazy Drop! Please click a button below to randomize drop sites. 
+    </p>
+</header>
+
+<section>
+    <input id="fortnite-btn" type="button" value="Fortnite Drop" onclick="FortniteDrop()"/>
+    <input id="warzone-btn" type="button" value="Warzone Drop" onclick="WarzoneDrop()"/>
+</section>
+
+<section>
+    <h3 id="output">Where we droppin?</h3>
+</section>
+
+<script>
+
+$("input").click(function() {
+        $("h3").fadeIn(1000);
+    });
+
+    function WarzoneDrop() {
+        var warzoneCities = ["Dam", "Military Base", "Quarry", "Airport", "TV Station", "Storage Town", "Superstore", "Stadium", "Lumber", "Boneyard", "Train Station", "Hospital", "Downtown", "Farmland", "Promenade West", "Promenade East", "Hills", "Park", "Port", "Prison", "Neighborhood"];
+        var randomCity = warzoneCities[~~(Math.random() * warzoneCities.length)];
+        document.getElementById("output").innerHTML = randomCity;
+    };
+    
+
+    function FortniteDrop() {
+        var fortniteChapter13Cities = ["Doom's Domain", "Sweaty Sands", "Steamy Stacks", "Holly Hedges", "Salty Springs", "The Authority", "Frenzy Farm", "Lazy Lake", "Retail Row", "The Fortilla", "Misty Meadows", "Craggy Cliffs", "Dirty Docks", "Slurpy Swamp", "Weeping Woods"];
+        var randomCity = fortniteChapter13Cities[~~(Math.random() * fortniteChapter13Cities.length)];
+        document.getElementById("output").innerHTML = randomCity;
+    }
+
+
+
+</script>
+</body>
+</html>
