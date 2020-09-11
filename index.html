@@ -7,28 +7,33 @@
 </head>
 <body>
 
-<header>
+<header class="background-container">
     <h1>Lazy Drop</h1>
 
     <p>
-        Welcome to Lazy Drop! Please click a button below to randomize drop sites. 
+        Click a button to drop somewhere random :)
     </p>
+
+
+
+    <input id="fortnite-btn" type="button" value="Fortnite Drop" onclick="FortniteDrop()"/>
+    <input id="warzone-btn" type="button" value="Warzone Drop" onclick="WarzoneDrop()"/>
 </header>
 
 <section>
-    <input id="fortnite-btn" type="button" value="Fortnite Drop" onclick="FortniteDrop()"/>
-    <input id="warzone-btn" type="button" value="Warzone Drop" onclick="WarzoneDrop()"/>
+    <h3 class="center-hv" id="output">Where we droppin?</h3>
 </section>
 
-<section>
-    <h3 id="output">Where we droppin?</h3>
-</section>
+<footer id="footer" class="center-hv">
+    This the the footer where nothing lives but empty space...
+</footer>
 
 <script>
 
 $("input").click(function() {
         $("h3").hide().fadeIn(500);
     });
+
 
     function WarzoneDrop() {
         var warzoneCities = ["Dam", "Military Base", "Quarry", "Airport", "TV Station", "Storage Town", "Superstore", "Stadium", "Lumber", "Boneyard", "Train Station", "Hospital", "Downtown", "Farmland", "Promenade West", "Promenade East", "Hills", "Park", "Port", "Prison", "Neighborhood"];
