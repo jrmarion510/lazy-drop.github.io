@@ -27,7 +27,7 @@
 <script>
 
 $("input").click(function() {
-        $("h3").fadeIn(1000);
+        $("h3").hide().fadeIn(500);
     });
 
     function WarzoneDrop() {
@@ -42,6 +42,7 @@ $("input").click(function() {
         var randomCity = fortniteChapter13Cities[~~(Math.random() * fortniteChapter13Cities.length)];
         document.getElementById("output").innerHTML = randomCity;
     }
+
 
 
 
