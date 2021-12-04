@@ -17,7 +17,6 @@
 
 
     <input id="fortnite-btn" type="button" value="Fortnite" onclick="FortniteDrop()"/>
-    <input id="warzone-btn" type="button" value="Warzone" onclick="WarzoneDrop()"/>
 </header>
 
 <section>
@@ -33,13 +32,6 @@
 $("input").click(function() {
         $("h3").hide().fadeIn(500);
     });
-
-
-    function WarzoneDrop() {
-        var warzoneCities = ["Dam", "Military Base", "Quarry", "Airport", "TV Station", "Storage Town", "Superstore", "Stadium", "Lumber", "Boneyard", "Train Station", "Hospital", "Downtown", "Farmland", "Promenade West", "Promenade East", "Hills", "Park", "Port", "Prison", "Neighborhood"];
-        var randomCity = warzoneCities[~~(Math.random() * warzoneCities.length)];
-        document.getElementById("output").innerHTML = randomCity;
-    };
     
 
     function FortniteDrop() {
